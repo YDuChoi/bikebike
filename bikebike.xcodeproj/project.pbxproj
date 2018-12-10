@@ -12,6 +12,9 @@
 		FDBEB26B21BE02A900FE3D93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDBEB26921BE02A900FE3D93 /* Main.storyboard */; };
 		FDBEB26D21BE02AE00FE3D93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDBEB26C21BE02AE00FE3D93 /* Assets.xcassets */; };
 		FDBEB27021BE02AE00FE3D93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDBEB26E21BE02AE00FE3D93 /* LaunchScreen.storyboard */; };
+		FDBEB27921BE02C600FE3D93 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDBEB27821BE02C600FE3D93 /* MapKit.framework */; };
+		FDBEB27B21BE02F000FE3D93 /* bike.xml in Resources */ = {isa = PBXBuildFile; fileRef = FDBEB27A21BE02F000FE3D93 /* bike.xml */; };
+		FDBEB27D21BE031600FE3D93 /* BusanData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBEB27C21BE031600FE3D93 /* BusanData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		FDBEB26C21BE02AE00FE3D93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDBEB26F21BE02AE00FE3D93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FDBEB27121BE02AE00FE3D93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDBEB27821BE02C600FE3D93 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		FDBEB27A21BE02F000FE3D93 /* bike.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = bike.xml; path = "../../201412409 이정연/Bike/Bike/bike.xml"; sourceTree = "<group>"; };
+		FDBEB27C21BE031600FE3D93 /* BusanData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BusanData.swift; path = ../../Busan_EV_Map/navigation_test/BusanData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDBEB27921BE02C600FE3D93 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +47,7 @@
 			children = (
 				FDBEB26421BE02A900FE3D93 /* bikebike */,
 				FDBEB26321BE02A900FE3D93 /* Products */,
+				FDBEB27721BE02C600FE3D93 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +62,8 @@
 		FDBEB26421BE02A900FE3D93 /* bikebike */ = {
 			isa = PBXGroup;
 			children = (
+				FDBEB27C21BE031600FE3D93 /* BusanData.swift */,
+				FDBEB27A21BE02F000FE3D93 /* bike.xml */,
 				FDBEB26521BE02A900FE3D93 /* AppDelegate.swift */,
 				FDBEB26721BE02A900FE3D93 /* ViewController.swift */,
 				FDBEB26921BE02A900FE3D93 /* Main.storyboard */,
@@ -62,6 +72,14 @@
 				FDBEB27121BE02AE00FE3D93 /* Info.plist */,
 			);
 			path = bikebike;
+			sourceTree = "<group>";
+		};
+		FDBEB27721BE02C600FE3D93 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FDBEB27821BE02C600FE3D93 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +142,7 @@
 			files = (
 				FDBEB27021BE02AE00FE3D93 /* LaunchScreen.storyboard in Resources */,
 				FDBEB26D21BE02AE00FE3D93 /* Assets.xcassets in Resources */,
+				FDBEB27B21BE02F000FE3D93 /* bike.xml in Resources */,
 				FDBEB26B21BE02A900FE3D93 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDBEB26821BE02A900FE3D93 /* ViewController.swift in Sources */,
+				FDBEB27D21BE031600FE3D93 /* BusanData.swift in Sources */,
 				FDBEB26621BE02A900FE3D93 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
