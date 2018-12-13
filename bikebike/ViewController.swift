@@ -9,8 +9,9 @@
 import UIKit
 import MapKit
 
-class ViewController: UIViewController, XMLParserDelegate, MKMapViewDelegate {
+class ViewController: UIViewController, XMLParserDelegate, MKMapViewDelegate, CLLocationManagerDelegate {
     
+     let locationManager = CLLocationManager()
     @IBOutlet weak var mapView: MKMapView!
     var annotation: BusanData?
     var annotations: Array = [BusanData]()
@@ -54,6 +55,11 @@ class ViewController: UIViewController, XMLParserDelegate, MKMapViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.locationManager.delegate = self
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        self.locationManager.requestWhenInUseAuthorization()
+        self.locationManager.startUpdatingLocation()
+        self.mapView.showsUserLocation = true
         
         if let path = Bundle.main.url(forResource: "bike", withExtension: "xml"){
             if let myParser = XMLParser(contentsOf: path) {
@@ -145,7 +151,13 @@ class ViewController: UIViewController, XMLParserDelegate, MKMapViewDelegate {
         }
         
     }
-
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location = locations.last
+        let center = CLLocationCoordinate2DMake(location!.coordinate.latitude, location!.coordinate.latitude)
+        let region = MKCoordinateRegion(center: center, span:MKCoordinateSpan(latitudeDelta: 1, longitudeDelta: 1))
+        self.mapView.setRegion(region, animated: true)
+        self.locationManager.startUpdatingLocation()
+    }
 
 }
 
